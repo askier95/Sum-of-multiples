@@ -1,0 +1,38 @@
+class Multiples{
+    int a = 0; //Value that program will multiple
+    int max = 0; // Maximum value for multiplication
+    int sum = 0; 
+    int repeat = 1;
+
+    public int arrSize(int a, int max){ //This instruction counting how many times "multiple" method will be repeated;
+        this.max = max;
+        this.a = a;
+        while (a * repeat < max){
+            repeat++;
+        }
+        return repeat-1;
+    }
+
+    public void multiple(int[] arr) { // Adding multiples to the array;
+        for(int i = 0; i < arr.length; i++){
+            if(a*(i+1) < max){
+                arr[i] = a * (i+1);
+            }
+            sum+=arr[i]; // Summing the array = summing all multiples;
+        }
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Multiples alg = new Multiples();
+        int arr[] = new int[alg.arrSize(3,1000)]; //Counting array size by using "arrSize" method above;
+
+        alg.multiple(arr); // Adding all values to the array;
+
+        System.out.println(arr.length); // <-- output: 333
+        System.out.println(alg.sum); // <--- output 166833
+    }
+}
