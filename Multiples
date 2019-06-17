@@ -33,6 +33,6 @@ public class Main {
         alg.multiple(arr); // Adding all values to the array;
 
         System.out.println(arr.length); // <-- output: 333
-        System.out.println(alg.sum); // <--- output 166833
+        System.out.println(alg.sum); // <--- output: 166833
     }
 }
