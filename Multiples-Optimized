@@ -1,0 +1,17 @@
+class Multiply{
+
+    public static int sum(int a, int limit){
+        int sum = 0;
+        int i =1;
+        while (a*i<limit){
+            sum += a*i;
+             i++;
+        }
+        return sum;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        System.out.println(Multiply.sum( 3, 1000) + Multiply.sum(5, 1000));
+    }
+}
